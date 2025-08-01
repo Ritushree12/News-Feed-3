@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Refined using TailwindCSS elements. -->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1"></script>
+    <title>Newsfeed</title>
+</head>
+
+<body class="dark:bg-gray-800">
+    <h1 class="text-5xl font-extrabold dark:text-white text-center mt-6">Newsfeed</h1>
+    <div class="text-center mb-6">
+        <small class="ms-2 font-semibold text-gray-500 dark:text-gray-400 italic">Yet another newsfeed</small>
+    </div>
+
+    <!-- Dropdown + Search -->
+    <div class="flex flex-col md:flex-row justify-between items-center px-6 mb-6 gap-4">
+        <el-dropdown>
+            <button
+                class="inline-flex justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-xs ring-1 ring-gray-300 ring-inset hover:bg-gray-50">
+                Select a Category
+                <svg viewBox="0 0 20 20" fill="currentColor" class="-mr-1 size-0.5 text-gray-400">
+                    <path
+                        d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" />
+                </svg>
+            </button>
+            <el-menu anchor="bottom end" popover
+                class="w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 transition focus:outline-none">
+                <div class="py-1">
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">All settings</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Politics</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Bollywood</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">State</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Nation</a>
+                </div>
+            </el-menu>
+        </el-dropdown>
+
+        <form class="w-full max-w-md">
+            <div class="relative">
+                <input type="search" id="default-search"
+                    class="block w-full p-4 ps-4 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                    placeholder="Email addr.." required />
+                <button type="submit"
+                    class="absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 text-white font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700">Subscribe</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- News Grid -->
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 place-items-center">
+
+        <!-- News 1 -->
+        <div
+            class="w-full min-h-[520px] max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 flex flex-col items-center">
+            <div class="w-full h-[200px] overflow-hidden rounded-t-lg flex items-center justify-center bg-white">
+                <img src="../Images/Mumbai.jpeg" alt="Mumbai" class="w-auto h-full object-cover" />
+            </div>
+            <div class="p-5">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">News 1</h5>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                    Heavy rainfall continued to lash Mumbai for the second consecutive day, leading to severe
+                    waterlogging in several parts...
+                </p>
+                <a href="#"
+                    class="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 dark:bg-blue-600 dark:hover:bg-blue-700">
+                    Continue Reading
+                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 5h12m0 0L9 1m4 4L9 9" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- News 2 -->
+        <div
+            class="w-full min-h-[520px] max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 flex flex-col items-center">
+            <div class="w-full h-[200px] overflow-hidden rounded-t-lg flex items-center justify-center bg-white">
+                <img src="../Images/isro.png" alt="ISRO" class="h-full w-auto object-contain" />
+            </div>
+            <div class="p-5">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">News 2</h5>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                    ISRO successfully launched Chandrayaan-4 to explore the Moon’s south pole. The mission lifted off
+                    from Sriharikota at 9:15 AM IST.
+                </p>
+                <a href="#"
+                    class="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 dark:bg-blue-600 dark:hover:bg-blue-700">
+                    Continue Reading
+                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 5h12m0 0L9 1m4 4L9 9" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- News 3 -->
+        <div
+            class="w-full min-h-[520px] max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 flex flex-col items-center">
+            <div class="w-full h-[200px] overflow-hidden rounded-t-lg flex items-center justify-center bg-white">
+                <img src="../Images/NITI-Aayog.png" alt="NITI Aayog" class="h-full w-auto object-contain" />
+            </div>
+            <div class="p-5">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">News 3</h5>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                    Govt of India launches National AI Literacy Program for students, in collaboration with NITI Aayog
+                    and tech partners.
+                </p>
+                <a href="#"
+                    class="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 dark:bg-blue-600 dark:hover:bg-blue-700">
+                    Continue Reading
+                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 5h12m0 0L9 1m4 4L9 9" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="bg-white rounded-lg shadow-sm mt-10 dark:bg-gray-800">
+        <div class="w-full mx-auto max-w-screen-xl p-4 text-center">
+            <span class="text-sm text-gray-500 dark:text-gray-400">© Newsfeed</span>
+        </div>
+    </footer>
+</body>
+
+</html>
