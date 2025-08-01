@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <title>Newsfeed</title>
+  </head>
+
+  <body>
+    <header class="text-center bg-blue-800 text-white">
+      <h1 class="text-6xl font-bold">NEWS FEED</h1>
+      <p class="font-light italic">Yet another newsfeed</p>
+    </header>
+
+    <div class="float-right mr-5 mb-2 ml-5">
+      <label for="category">
+        <h3 class="text-2xl font-bold">Select a category</h3>
+      </label>
+
+      <select name="category" id="category" class="mb-4 border-2 border-black">
+        <option value="politics">All</option>
+        <option value="politics">Politics</option>
+        <option value="bollywood">Bollywood</option>
+        <option value="state">State</option>
+        <option value="nation">Nation</option>
+      </select>
+
+      <label for="subscribe">
+        <h3 class="text-2xl font-bold">Subscribe</h3>
+      </label>
+      <input
+        type="text"
+        id="email"
+        name="subscribe"
+        placeholder="Email Address"
+        class="border-2 border-black p-1"
+      />
+      <button
+        id="subscribe"
+        class="bg-blue-800 text-white p-1 border-2 border-black"
+      >
+        Subscribe
+      </button>
+    </div>
+
+    <div class="flex flex-col m-3 gap-3">
+      <div class="flex m-4 border-b border-gray-300 pb-4 items-start">
+        <div class="w-[250px] h-[250px] flex flex-shrink-0 items-center justify-center bg-gray-100 border border-gray-300 overflow-hidden">
+            <img src="../Images/Mumbai.jpeg" alt="Mumbai" class="w-full h-full object-cover" />
+        </div>
+        <div class="content flex flex-col gap-y-4 ml-4">
+          <h2 class="font-bold text-3xl">News 1</h2>
+          <span class="italic text-gray-700"
+            >Posted on <b>21<sup>st</sup>July, 2025.</b>Category:
+            <b>Category 1</b></span
+          >
+        <p class="w-[500px] h-[30px] overflow-hidden text-ellipsis whitespace-nowrap justify-center">
+            Heavy rainfall continued to lash Mumbai for the second consecutive
+            day, leading to severe waterlogging in several parts of the city.
+            Local train services were partially affected, and road traffic came
+            to a standstill during peak hours.The India Meteorological
+            Department (IMD) has issued an orange alert for Mumbai and
+            surrounding areas, warning of intense rainfall over the next 24
+            hours. "We urge residents to avoid unnecessary travel and stay
+            indoors," said a civic official.
+          </p>
+          <br />
+          <button
+            class="bg-amber-600 text-white p-1 border-2 border-black w-[200px]"
+          >
+            Continue Reading
+          </button>
+        </div>
+      </div>
+
+    <div class="flex m-4 border-b border-gray-300 pb-4 items-start">
+        <div
+            class="w-[250px] h-[250px] flex flex-shrink-0 items-center justify-center bg-gray-100 border border-gray-300 overflow-hidden">
+          <img
+            src="../Images/isro.png"
+            alt="ISRO"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="content flex flex-col gap-y-4 ml-4">
+          <h2 class="font-bold text-3xl">News 2</h2>
+          <span class="italic text-gray-700"
+            >Posted on <b>21<sup>st</sup>July, 2025.</b>Category:
+            <b>Category 1</b></span
+          >
+        <p class="w-[500px] h-[30px] overflow-hidden text-ellipsis whitespace-nowrap justify-center">
+            The Indian Space Research Organisation (ISRO) has successfully
+            launched Chandrayaan-4, India’s fourth lunar mission, aimed at
+            conducting advanced research on the Moon's south pole region. The
+            launch took place at 9:15 AM IST from the Satish Dhawan Space Centre
+            in Sriharikota.
+          </p>
+          <br />
+          <button
+            class="bg-amber-600 text-white p-1 border-2 border-black w-[200px]"
+          >
+            Continue Reading
+          </button>
+        </div>
+      </div>
+    <div class="flex m-4 border-b border-gray-300 pb-4 items-start mb-[50px]">
+        <div
+            class="w-[250px] h-[250px] flex flex-shrink-0 items-center justify-center bg-gray-100 border border-gray-300 overflow-hidden">
+          <img
+            src="../Images/NITI-Aayog.png"
+            alt="Nitiayog"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="content flex flex-col gap-y-4 ml-4">
+          <h2 class="font-bold text-3xl">News 3</h2>
+          <span class="italic text-gray-700"
+            >Posted on <b>21<sup>st</sup>July, 2025.</b>Category:
+            <b>Category 1</b></span
+          >
+        <p class="w-[500px] h-[30px] overflow-hidden text-ellipsis whitespace-nowrap justify-center">
+            In a major push towards digital education, the Government of India
+            today launched the National AI Literacy Program, aimed at equipping
+            school and college students with foundational knowledge of
+            Artificial Intelligence. The initiative was unveiled by the Ministry
+            of Education in collaboration with NITI Aayog and leading tech
+            companies.
+        </p>
+          <br />
+          <button
+            class="bg-amber-600 text-white p-1 border-2 border-black w-[200px]"
+          >
+            Continue Reading
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <footer
+      class="bg-blue-800 text-center italic h-[60px] w-full flex text-white items-center justify-center fixed bottom-0 left-0"
+    >
+      <span>&copy Newsfeed</span>
+    </footer>
+  </body>
+</html>
